@@ -1,0 +1,8 @@
+<h1>新規棋譜投稿</h1>
+<%= form_with model: @post, local:true do |f| %>
+  <h4>棋譜</h4>
+  <%= f.text_field :game_recode %>
+  <h4>感想</h4>
+  <%= f.text_area :text %>
+  <%= f.submit '投稿する' %>
+<% end %>
