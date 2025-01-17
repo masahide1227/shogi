@@ -58,4 +58,17 @@ a:hover {
 
 .nav-link {
   text-decoration: none;
-} 
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: aqua!important;
+  text-decoration: underline;
+}
+
+.profile-img {
+  border-radius: 50%;
+}

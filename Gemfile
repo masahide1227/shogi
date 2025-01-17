@@ -80,3 +80,11 @@ gem 'jquery-rails'
 gem "sassc-rails"
 
 gem 'devise'
+
+gem 'kaminari'
+
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+
+gem "refile-mini_magick"
+
+gem 'ffi'
