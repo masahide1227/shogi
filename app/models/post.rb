@@ -9,6 +9,8 @@ class Post < ApplicationRecord
   validates :game_recode, presence: true, length: { maximum: 1000 }
   validates :text, presence: true, length: { maximum: 1000 }
 
+  enum status: { published: 0, draft: 1 }
+
     def favorited_by?(user)
       favorites.where(user_id: user.id).exists?
     end

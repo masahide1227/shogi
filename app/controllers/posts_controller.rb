@@ -14,13 +14,14 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.page(params[:page]).reverse_order
+    @posts = Post.published.page(params[:page]).reverse_order
+    @posts = @posts.where('battle_type LIKE ?', "%#{params[:search]}%") if params[:search].present?
   end
 
-  def show
-    @post = Post.find(params[:id])
-    @comment = Comment.new
-    @comments = @post.comments.page(params[:page]).per(7).reverse_order
+  def show 
+    @post = Post.find(params[:id]) 
+    @comment = Comment.new 
+    @comments = @post.comments.page(params[:page]).per(7).reverse_order 
   end
 
   def edit
@@ -41,10 +42,14 @@ class PostsController < ApplicationController
     post.destroy
     redirect_to posts_path
   end
+  
+  def confirm
+    @posts = current_user.posts.draft.page(params[:page]).reverse_order
+  end
 
   private
   def post_params
-    params.require(:post).permit(:game_recode, :text, :battle_type, :image, :user_id)
+    params.require(:post).permit(:game_recode, :text, :battle_type, :image, :user_id, :status)
   end
 
 end

@@ -124,8 +124,12 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.12.1)
+      devise (>= 4.9.0)
     domain_name (0.6.20240107)
     drb (2.2.1)
+    enum_help (0.0.19)
+      activesupport (>= 3.0.0)
     error_highlight (0.7.0)
     erubi (1.13.1)
     execjs (2.10.0)
@@ -339,6 +343,8 @@ DEPENDENCIES
   capybara
   debug
   devise
+  devise-i18n
+  enum_help
   error_highlight (>= 0.4.0)
   ffi
   importmap-rails

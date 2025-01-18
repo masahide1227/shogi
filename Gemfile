@@ -88,3 +88,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
 gem 'ffi'
+
+gem 'enum_help'
+
+gem 'devise-i18n'
