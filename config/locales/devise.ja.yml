@@ -11,4 +11,16 @@ ja:
             password:
               blank: "パスワードを入力してください。"
             name:
-              blank: "名前を入力してください。"
+              blank: "名前を入力してください。" 
+        post: 
+          attributes: 
+            battle_type: 
+              blank: "戦型を入力してください。" 
+            game_recode: 
+              blank: "棋譜を入力してください。" 
+            text: 
+              blank: "感想を入力してください。"
+        comment: 
+          attributes: 
+            comment: 
+              blank: "コメントを入力してください。"
