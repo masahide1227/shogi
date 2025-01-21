@@ -88,15 +88,35 @@ h1 {
 
   .comments-index {
     background-color: #fff;
-    border: 1px #000 solid;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
   }
   
   .comment-delete {
     margin-left: auto;
   }
-  
+
   .comments {
-    margin-left: 50px;
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .comment { 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 10px;
+  }
+
+  .comment-user { 
+    font-weight: bold; 
+    margin-bottom: 5px;
+  }
+
+  .comment-text {
+     margin: 0; 
   }
   
   .caption {

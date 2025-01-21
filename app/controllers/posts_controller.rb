@@ -15,7 +15,8 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.published.page(params[:page]).reverse_order
-    @posts = @posts.where('battle_type LIKE ?', "%#{params[:search]}%") if params[:search].present?
+    if params[:search].present? 
+      @posts = @posts.where('battle_type LIKE ?', "%#{params[:search]}%") end
   end
 
   def show 
