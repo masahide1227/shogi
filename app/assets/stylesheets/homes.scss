@@ -1,11 +1,21 @@
 .title {
-    font-family: cursive;
-  }
-  
-  .sub-title {
-    font-family: serif;
-  }
-  
+  font-family: 'Roboto', sans-serif; /* カスタムフォント */
+  font-size: 3rem; /* フォントサイズ */
+  color: #333; /* 文字色 */
+  text-align: center; /* 中央揃え */
+  text-shadow: 2px 2px 4px #aaa; /* テキストシャドウ */
+  padding: 10px; /* パディング */
+}
+
+.sub-title {
+  font-family: 'Arial', sans-serif; /* フォントファミリー */
+  font-size: 1.5rem; /* フォントサイズ */
+  color: #666; /* 文字色 */
+  text-align: center; /* 中央揃え */
+  text-shadow: 1px 1px 2px #aaa; /* テキストシャドウ */
+  padding: 5px; /* パディング */
+}
+
   .cover {
     height: 100%;
     width: 100%;

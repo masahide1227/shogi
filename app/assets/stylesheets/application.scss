@@ -72,3 +72,30 @@ a:hover {
 .profile-img {
   border-radius: 50%;
 }
+
+.btn {
+  font-size: 1.5rem; /* ボタンのフォントサイズを大きく */
+  padding: 15px 30px; /* ボタンの内側の余白（上下左右）を調整 */
+  border-radius: 8px; /* 角を少し丸くする */
+  border: 2px solid black; /* ボタンの縁の色を黒に設定 */
+}
+
+.btn-primary {
+  background-color: #ff6347; /* プライマリボタンの背景色 */
+  color: #fff; /* テキストの色 */
+}
+
+.btn-primary:hover {
+  background-color: #e55342; /* ホバー時の背景色（少し濃いトマト色） */ 
+  border-color: black; /* ホバー時の枠線の色を黒に設定 */
+}
+
+.btn-success {
+  background-color: #28a745; /* サクセスボタンの背景色 */
+  color: #fff; /* テキストの色 */
+}
+
+.btn-success:hover { 
+  background-color: #218838; /* ホバー時の背景色（少し濃い緑色） */ 
+  border-color: black; /* ホバー時の枠線の色を黒に設定 */
+}
