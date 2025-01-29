@@ -28,3 +28,31 @@
 .profile {
     padding: 15px;
 }
+
+.follow-text {
+    font-size: 20px; /* サイズは必要に応じて調整してください */
+    font-weight: bold; /* オプション：文字を太字にします */
+    margin-right: 20px; /* 文字の間隔を調整します */
+    background-color: lightgray; /* 背景色を設定 */
+    transition: background-color 0.5s ease; /* 色が変わるときのアニメーションを追加 */
+}
+
+.follow-text:hover {
+    background-color: darkgray; /* ホバー時の背景色を設定 */
+  }
+
+.chat-button-container {
+    display: flex;
+    justify-content: flex-end; /* 右端に移動 */
+    width: 100%; /* 幅を100%にして右端に配置 */
+  }
+  
+.chat-button-size {
+    width: 135px; /* ボタンの幅を200pxに設定 */
+    height: 60px; /* ボタンの高さを60pxに設定 */
+    text-align: center; /* テキストを中央揃え */
+    display: inline-block; /* インラインブロック要素として扱う */
+    padding: 15px; /* 内側の余白を追加 */
+    font-size: 18px; /* フォントサイズを大きく調整 */
+  }
+  

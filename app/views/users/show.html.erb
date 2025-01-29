@@ -1,10 +1,10 @@
-<div class="cover-user-show">
+<div class="cover-user-show my-page">
   <div class="container d-flex flex-column align-items-center">
     <div class="row mt-5">
       <% if user_signed_in? && @user == current_user %>
         <h1 class="font-weight-normal">マイページ</h1>
       <% else %>
-        <h1 class="font-weight-normal"><%= @user.name %>さんのページ</h1>
+        <h1 class="font-weight-normal user-page"><%= @user.name %>さんのページ</h1>
       <% end %>
     </div>
     <% if user_signed_in? && @user == current_user %>
@@ -23,16 +23,32 @@
         </p>
       <% end %>
     <% end %>
+    <% unless @user.id == current_user.id %>
+      <% if (current_user.following? @user) && (@user.following? current_user)  %>
+        <% if @isRoom == true %>
+          <div class="chat-button-container">
+            <p class="user-show-room"><a href="<%= room_path(@roomId) %>" class="btn btn-primary btn-lg chat-button-size">チャットへ</a></p>
+          </div>
+        <% else %>
+          <%= form_for [current_user, @room] do |f| %>
+            <%= fields_for @entry do |e| %>
+              <%= e.hidden_field :user_id, value: @user.id %>
+            <% end %>
+            <%= f.submit "チャットを始める", class:"btn btn-primary btn-lg user-show-chat"%>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
     <div class="d-flex w-100">
       <%= attachment_image_tag @user, :profile_image, size: '100x100', fallback: "no_image.svg", class: "mb-3 profile-img" %>
       <h4 class="ml-3 mb-3 card w-100 profile"><%= @user.profile %></h4>
     </div>
     <div class="d-flex">
       <%= link_to follows_user_path(@user) do %>
-        <h6>フォロー<%= @following_users.count %></h6>
+        <h6 class="follow-text">フォロー<%= @following_users.count %></h6>
       <% end %>  
       <%= link_to followers_user_path(@user) do %>
-        <h6>フォロワー<%= @follower_users.count %></h6>
+        <h6 class="follow-text">フォロワー<%= @follower_users.count %></h6>
       <% end %>
     </div>
     <div class="row mt-5 index-left w-100">
@@ -49,3 +65,4 @@
     <%= paginate @posts %>
   </div>
 </div>
+

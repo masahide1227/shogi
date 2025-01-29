@@ -74,7 +74,7 @@ a:hover {
 }
 
 .btn {
-  font-size: 1.5rem; /* ボタンのフォントサイズを大きく */
+  font-size: 1rem; /* ボタンのフォントサイズを大きく */
   padding: 15px 30px; /* ボタンの内側の余白（上下左右）を調整 */
   border-radius: 8px; /* 角を少し丸くする */
   border: 2px solid black; /* ボタンの縁の色を黒に設定 */
@@ -98,4 +98,108 @@ a:hover {
 .btn-success:hover { 
   background-color: #218838; /* ホバー時の背景色（少し濃い緑色） */ 
   border-color: black; /* ホバー時の枠線の色を黒に設定 */
+}
+
+.comments .btn-success {
+  margin-bottom: 10px; /* ボタンとテキストエリアの間に余白を追加 */
+  margin-left: 10px; /* ボタンの左側に余白を追加して右に移動 */
+}
+
+.comments .text-area {
+  margin-top: 10px; /* テキストエリアの上に余白を追加 */
+}
+
+.comments {
+  margin-left: 40px; /* 右に移動するための左マージンを設定 */
+  width: calc(100% - 100px); /* コンテナの幅を設定してバランスを調整 */
+}
+
+.btn-group-vertical .btn {
+  display: block;
+  width: 100%;
+  border-radius: 8px; /* 角を丸く設定 */
+  margin-bottom: 10px; /* 下側のマージンを設定して間隔を追加 */
+}
+
+.btn-group-vertical .btn:last-child {
+  margin-bottom: 0; /* 最後のボタンの下側マージンをリセット */
+}
+
+.btn-info, .btn-danger {
+  border-radius: 8px; /* 全ての角を丸く設定 */
+  margin-bottom: 10px; /* 下側にマージンを設定して間隔を追加 */
+  display: block; /* ブロック要素として表示 */
+  width: 100%; /* 幅を100%に設定 */
+}
+
+.btn-dark {
+  margin-top: 0; /* 上側の余白を削除 */
+  margin-bottom: 0; /* 下側の余白も削除 */
+}
+
+.title-center {
+  width: 100%; /* タイトルのコンテナ全体の幅を設定 */
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+
+.message-container {
+  display: block; /* ブロック要素に設定して、縦に並べる */
+  max-width: 500%; /* 必要に応じて幅を調整 */
+  margin: 5px 400px;
+  border: 1px solid black; 
+  background-color: white; 
+  padding: 5px; 
+  border-radius: 5px;
+  word-wrap: break-word; /* 長い単語を折り返す */
+}
+
+.message-user {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left; /* 左揃え */
+}
+
+.message-text {
+  text-align: left; /* 左揃え */
+  margin-bottom: 5px;
+}
+
+.message-actions {
+  display: flex;
+  justify-content: flex-start; /* 左揃え */
+  gap: 10px; /* ボタンと日時の間に空間を作る */
+  text-align: left; /* 左揃え */
+}
+
+.message-timestamp {
+  color: #6c757d;
+  font-size: 1em;
+  text-align: left; /* 左揃え */
+}
+
+.delete-link {
+  color: red;
+  align-self: flex-start; /* 左揃え */
+}
+
+.talk-room-container {
+  display: flex;
+  flex-direction: column; /* メッセージを縦に並べる */
+  align-items: center; /* 中央揃え */
+  height: 150%;
+  width: 100%;
+  background-image: url(/assets/room.jpg);
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-size: 100% 100%;
+}
+
+.talk-room-content {
+  width: 100%; /* 中央揃えのために全幅を設定 */
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
+  align-items: flex-start; /* 左揃え */
 }

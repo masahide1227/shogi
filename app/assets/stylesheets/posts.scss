@@ -31,7 +31,21 @@ h1 {
   .one-post img:hover {
     transform: scale(1.2,1.2);
   }
+
+  .my-page .one-post {
+    background-color: #f0f8ff; /* お好きな背景色に変更してください */
+    padding: 10px; /* 任意でパディングを追加 */
+    margin: 10px; /* 任意でマージンを追加 */
+    border-radius: 5px; /* 任意で角を丸くする */
+  }
   
+  .user-page .one-post {
+    background-color: #ffe4e1; /* お好きな背景色に変更してください */
+    padding: 10px; /* 任意でパディングを追加 */
+    margin: 10px; /* 任意でマージンを追加 */
+    border-radius: 5px; /* 任意で角を丸くする */
+  }
+    
   .caption {
     color: black;
     font-size: 20px;
@@ -92,6 +106,8 @@ h1 {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    max-width: 45%; /* 最大幅を設定 */
+    word-wrap: break-word; /* 長い単語を折り返す */
   }
   
   .comment-delete {
@@ -124,6 +140,9 @@ h1 {
   }
   
   .favorite_btn {
+    display: inline-block;
+    margin-top: 10px; /* 上にマージンを追加して位置を調整 */
+    margin-bottom: 10px; /* 下にマージンを追加して位置を調整 */
     color: #000;
   }
   

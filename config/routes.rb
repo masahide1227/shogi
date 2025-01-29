@@ -20,10 +20,15 @@ Rails.application.routes.draw do
   end
 
   resources :users, only:[:index, :show, :edit, :update] do
+    resources :messages, only: [:create]    
     member do
       get :follows, :followers
     end
     resource :relationships, only: [:create, :destroy]
+  end
+
+  resources :rooms, only: [:create, :show] do
+    resources :messages, only: [:create, :destroy] 
   end
 
 end
