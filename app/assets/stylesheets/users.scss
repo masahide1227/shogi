@@ -44,7 +44,7 @@
 .chat-button-container {
     display: flex;
     justify-content: flex-end; /* 右端に移動 */
-    width: 100%; /* 幅を100%にして右端に配置 */
+    width: 102%; /* 幅を100%にして右端に配置 */
   }
   
 .chat-button-size {
@@ -53,6 +53,6 @@
     text-align: center; /* テキストを中央揃え */
     display: inline-block; /* インラインブロック要素として扱う */
     padding: 15px; /* 内側の余白を追加 */
-    font-size: 18px; /* フォントサイズを大きく調整 */
+    font-size: 15px !important; /* フォントサイズを大きく調整 */
   }
   

@@ -83,6 +83,8 @@ a:hover {
 .btn-primary {
   background-color: #ff6347; /* プライマリボタンの背景色 */
   color: #fff; /* テキストの色 */
+  margin-right: 16px;
+  font-size: 1.2rem;
 }
 
 .btn-primary:hover {
@@ -93,6 +95,8 @@ a:hover {
 .btn-success {
   background-color: #28a745; /* サクセスボタンの背景色 */
   color: #fff; /* テキストの色 */
+  margin-left: 16px;
+  font-size: 1.2rem;
 }
 
 .btn-success:hover { 

@@ -152,3 +152,77 @@ h1 {
     margin: 10px; /* 任意でマージンを追加 */
     border-radius: 5px; /* 任意で角を丸くする */
   }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+  }
+  
+  .posts {
+    flex: 3;
+  }
+  
+  .sidebar {
+    flex: 1;
+    position: relative; /* 相対位置を設定 */
+    left: 180px; /* 左から120ピクセル移動させる */
+    margin-top: 40px; /* 余白を追加 */
+    align-self: flex-start; /* 上部に揃えるために追加 */
+    background-color: #eae877; /* 背景色を追加 */
+    padding: 10px; /* 余白を追加 */
+    border-radius: 5px; /* 角を丸くする */
+    width: auto; /* 幅を自動調整 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 影を追加 */
+  }
+
+  .sidebar h2 {
+    font-size: 1.5em; /* タイトルの文字サイズを大きくする */
+    text-align: center; /* 中央揃えにする */
+    margin-bottom: 20px; /* 下部余白を追加 */
+  }
+  
+  .ranking-list {
+    background-color: #ffffff;  /* ランキングリストの背景色 */
+    border: 2px solid #333;     /* 枠線 */
+    border-radius: 8px;         /* 枠線の角を丸く */
+    padding: 20px;              /* 内側の余白 */
+  }
+  
+  .ranking-item {
+    font-size: 1.2em;           /* フォントサイズ */
+    color: #333;                /* 文字の色 */
+    margin: 10px 0;             /* 上下の余白 */
+  }
+
+  body:not(.top-page) h1 {
+    position: relative;
+    padding: 0.25em 1em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+  
+  body:not(.top-page) h1:before,
+  body:not(.top-page) h1:after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    width: 2px;
+    height: -webkit-calc(100% + 14px);
+    height: calc(100% + 14px);
+    background-color: black;
+  }
+  
+  body:not(.top-page) h1:before {
+    left: 7px;
+  }
+  
+  body:not(.top-page) h1:after {
+    right: 7px;
+  }
+  

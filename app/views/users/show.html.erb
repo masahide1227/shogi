@@ -27,7 +27,8 @@
       <% if (current_user.following? @user) && (@user.following? current_user)  %>
         <% if @isRoom == true %>
           <div class="chat-button-container">
-            <p class="user-show-room"><a href="<%= room_path(@roomId) %>" class="btn btn-primary btn-lg chat-button-size">チャットへ</a></p>
+            <p class="user-show-room">
+            <a href="<%= room_path(@roomId) %>" class="btn btn-primary btn-lg chat-button-size">チャットへ</a></p>
           </div>
         <% else %>
           <%= form_for [current_user, @room] do |f| %>

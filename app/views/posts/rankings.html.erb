@@ -1,0 +1,16 @@
+<div class="cover-index">
+  <div class="container d-flex flex-column align-items-center">
+    <div class="row mt-5">
+      <h1 class="font-weight-normal">戦型ランキング</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <ol>
+          <% @rankings.each do |battle_type, count| %>
+            <li><%= "#{battle_type}: #{count}件" %></li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

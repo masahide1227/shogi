@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resource :favorites, only:[:create, :destroy]
     collection do
       get 'confirm'
+      get :rankings
     end
   end
 
@@ -30,5 +31,5 @@ Rails.application.routes.draw do
   resources :rooms, only: [:create, :show] do
     resources :messages, only: [:create, :destroy] 
   end
-
+  
 end
