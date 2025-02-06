@@ -1,19 +1,19 @@
 .title {
-  font-family: 'Roboto', sans-serif; /* カスタムフォント */
-  font-size: 3rem; /* フォントサイズ */
-  color: #333; /* 文字色 */
-  text-align: center; /* 中央揃え */
-  text-shadow: 2px 2px 4px #aaa; /* テキストシャドウ */
-  padding: 10px; /* パディング */
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+  text-shadow: 2px 2px 4px #aaa;
+  padding: 10px;
 }
 
 .sub-title {
-  font-family: 'Arial', sans-serif; /* フォントファミリー */
-  font-size: 1.5rem; /* フォントサイズ */
-  color: #666; /* 文字色 */
-  text-align: center; /* 中央揃え */
-  text-shadow: 1px 1px 2px #aaa; /* テキストシャドウ */
-  padding: 5px; /* パディング */
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  color: #666;
+  text-align: center;
+  text-shadow: 1px 1px 2px #aaa;
+  padding: 5px;
 }
 
   .cover {
@@ -32,25 +32,25 @@
   }
 
   .proverb {
-    display: block; /* ブロック要素として扱う */
-    position: relative; /* 相対位置を設定 */
-    top: 40px; /* 上からの距離を設定 */
-    text-align: center; /* 中央揃え */
-    background-color: #d1eef4; /* 背景色（ライトゴールド） */
-    border: 4px double #020202; /* 二重線の枠を追加 */
-    border-radius: 10px; /* 枠線の角を丸く */
-    padding: 10px 10px 0 10px; /* 内側の余白を追加 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
-    margin: 0 auto; /* 中央に配置 */
-    width: fit-content; /* 幅を内容に合わせる */
+    display: block;
+    position: relative;
+    top: 40px;
+    text-align: center;
+    background-color: #d1eef4;
+    border: 4px double #020202;
+    border-radius: 10px;
+    padding: 10px 10px 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: fit-content;
   }
 
   .proverb h3 {
-    font-size: 1.5rem; /* タイトルの文字サイズ */
-    color: #333; /* 文字の色 */
+    font-size: 1.5rem;
+    color: #333;
   }
   
   .proverb p {
     font-size: 1.2rem; /* 格言の文字サイズ */
-    color: #333; /* 文字の色 */
+    color: #333;
   }

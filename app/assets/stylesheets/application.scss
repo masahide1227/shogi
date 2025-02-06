@@ -74,75 +74,75 @@ a:hover {
 }
 
 .btn {
-  font-size: 1rem; /* ボタンのフォントサイズを大きく */
-  padding: 15px 30px; /* ボタンの内側の余白（上下左右）を調整 */
-  border-radius: 8px; /* 角を少し丸くする */
-  border: 2px solid black; /* ボタンの縁の色を黒に設定 */
+  font-size: 1rem;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: 2px solid black;
 }
 
 .btn-primary {
-  background-color: #ff6347; /* プライマリボタンの背景色 */
-  color: #fff; /* テキストの色 */
+  background-color: #ff6347;
+  color: #fff;
   margin-right: 16px;
   font-size: 1.2rem;
 }
 
 .btn-primary:hover {
-  background-color: #e55342; /* ホバー時の背景色（少し濃いトマト色） */ 
-  border-color: black; /* ホバー時の枠線の色を黒に設定 */
+  background-color: #e55342;
+  border-color: black;
 }
 
 .btn-success {
-  background-color: #28a745; /* サクセスボタンの背景色 */
-  color: #fff; /* テキストの色 */
-  margin-left: 16px;
+  background-color: #28a745;
+  color: #fff;
+  margin-left: 0px;
   font-size: 1.2rem;
 }
 
 .btn-success:hover { 
-  background-color: #218838; /* ホバー時の背景色（少し濃い緑色） */ 
-  border-color: black; /* ホバー時の枠線の色を黒に設定 */
+  background-color: #218838;
+  border-color: black; 
 }
 
 .comments .btn-success {
-  margin-bottom: 10px; /* ボタンとテキストエリアの間に余白を追加 */
-  margin-left: 10px; /* ボタンの左側に余白を追加して右に移動 */
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .comments .text-area {
-  margin-top: 10px; /* テキストエリアの上に余白を追加 */
+  margin-top: 10px;
 }
 
 .comments {
-  margin-left: 40px; /* 右に移動するための左マージンを設定 */
-  width: calc(100% - 100px); /* コンテナの幅を設定してバランスを調整 */
+  margin-left: 40px;
+  width: calc(100% - 100px);
 }
 
 .btn-group-vertical .btn {
   display: block;
   width: 100%;
-  border-radius: 8px; /* 角を丸く設定 */
-  margin-bottom: 10px; /* 下側のマージンを設定して間隔を追加 */
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .btn-group-vertical .btn:last-child {
-  margin-bottom: 0; /* 最後のボタンの下側マージンをリセット */
+  margin-bottom: 0;
 }
 
 .btn-info, .btn-danger {
-  border-radius: 8px; /* 全ての角を丸く設定 */
-  margin-bottom: 10px; /* 下側にマージンを設定して間隔を追加 */
-  display: block; /* ブロック要素として表示 */
-  width: 100%; /* 幅を100%に設定 */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block; 
+  width: 100%;
 }
 
 .btn-dark {
-  margin-top: 0; /* 上側の余白を削除 */
-  margin-bottom: 0; /* 下側の余白も削除 */
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .title-center {
-  width: 100%; /* タイトルのコンテナ全体の幅を設定 */
+  width: 100%;
   text-align: center;
   margin-top: 50px;
   font-size: 2.5em;
@@ -150,49 +150,49 @@ a:hover {
 }
 
 .message-container {
-  display: block; /* ブロック要素に設定して、縦に並べる */
-  max-width: 500%; /* 必要に応じて幅を調整 */
+  display: block;
+  max-width: 500%;
   margin: 5px 400px;
   border: 1px solid black; 
   background-color: white; 
   padding: 5px; 
   border-radius: 5px;
-  word-wrap: break-word; /* 長い単語を折り返す */
+  word-wrap: break-word;
 }
 
 .message-user {
   font-weight: bold;
   margin-bottom: 5px;
-  text-align: left; /* 左揃え */
+  text-align: left; 
 }
 
 .message-text {
-  text-align: left; /* 左揃え */
+  text-align: left;
   margin-bottom: 5px;
 }
 
 .message-actions {
   display: flex;
-  justify-content: flex-start; /* 左揃え */
-  gap: 10px; /* ボタンと日時の間に空間を作る */
-  text-align: left; /* 左揃え */
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: left; 
 }
 
 .message-timestamp {
   color: #6c757d;
   font-size: 1em;
-  text-align: left; /* 左揃え */
+  text-align: left;
 }
 
 .delete-link {
   color: red;
-  align-self: flex-start; /* 左揃え */
+  align-self: flex-start;
 }
 
 .talk-room-container {
   display: flex;
-  flex-direction: column; /* メッセージを縦に並べる */
-  align-items: center; /* 中央揃え */
+  flex-direction: column;
+  align-items: center;
   height: 150%;
   width: 100%;
   background-image: url(/assets/room.jpg);
@@ -202,8 +202,85 @@ a:hover {
 }
 
 .talk-room-content {
-  width: 100%; /* 中央揃えのために全幅を設定 */
+  width: 100%;
   display: flex;
-  flex-direction: column; /* 縦に並べる */
-  align-items: flex-start; /* 左揃え */
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* PC用のメニュー（通常表示） */
+.pc-nav {
+  display: flex;
+  justify-content: flex-end; /* 右寄せにする */
+  width: 100%; /* 親要素の幅を100%にする */
+}
+
+.pc-nav .nav-link {
+  margin-left: 20px; /* リンク間の間隔を開ける */
+  letter-spacing: 2px; /* 文字間隔を広げる */
+  align-items: center;
+}
+
+.shogi-player-link {
+  margin: 0;
+}
+
+.menu-container {
+  display: none; /* PCではハンバーガーメニューは表示しない */
+}
+
+/* スマホ・タブレット用のメニュー（ハンバーガーメニュー） */
+.menu {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  width: 200px;
+}
+
+.menu.hidden {
+  display: none;
+}
+
+.menu-container {
+  display: block; /* スマホ・タブレットではハンバーガーメニューを表示 */
+}
+
+.pc-nav {
+  display: none; /* スマホ・タブレットではPC用メニューを非表示 */
+}
+
+/* メディアクエリ - スマホ・タブレット表示 */
+@media (max-width: 768px) {
+  .pc-nav {
+    display: none; /* スマホ・タブレットではPC用メニューは非表示 */
+  }
+
+  .menu-container {
+    display: block; /* スマホ・タブレットではハンバーガーメニューを表示 */
+  }
+
+  .menu {
+    display: none; /* 初期状態でメニューを非表示にする */
+  }
+
+  .menu.hidden {
+    display: none; /* メニューがhiddenクラスを持っている時に非表示 */
+  }
+}
+
+/* メディアクエリ - PC表示（768px以上） */
+@media (min-width: 769px) {
+  .pc-nav {
+    display: flex; /* PC用メニューを表示 */
+  }
+
+  .menu-container {
+    display: none; /* ハンバーガーメニューはPCで非表示 */
+  }
 }
