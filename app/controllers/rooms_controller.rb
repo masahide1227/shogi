@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     if Entry.where(:user_id => current_user.id, :room_id => @room.id).present?
-      @messages = @room.messages.order(created_at: :desc).page(params[:page]).per(6)
+      @messages = @room.messages.order(created_at: :desc).page(params[:page]).per(5)
       @message = Message.new
       @entries = @room.entries  #Roomで相手の名前表示するために記述
       @myUserId = current_user.id

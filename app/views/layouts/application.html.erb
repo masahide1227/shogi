@@ -21,6 +21,7 @@
           <span class="bar"></span>
         </button>
         <nav id="menu" class="menu hidden">
+         <ul>
           <%= link_to "トップ", root_path, class: "text-white nav-link" %>
           <%= link_to "投稿する", new_post_path, class: "text-white nav-link" %>
           <%= link_to "投稿一覧", posts_path, class: "text-white nav-link" %>
@@ -28,6 +29,7 @@
           <%= link_to "ユーザ一覧", users_path, class: "text-white nav-link" %>
           <%= link_to "マイページ", user_path(current_user.id), class: "text-white nav-link" %>
           <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: "text-white nav-link" %>
+         </ul>
         </nav>
      </div>
 

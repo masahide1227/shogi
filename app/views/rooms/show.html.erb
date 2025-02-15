@@ -22,7 +22,7 @@
       <% end %>
     <% end %>
   </div>
-  <%= form_for [@room, @message] do |f| %>
+  <%= form_for [@room, @message], html: { class: "message-form" } do |f| %>
     <%= f.text_field :message, placeholder: "メッセージを入力して下さい", size: 50, class: "form-text-field" %>
     <%= f.hidden_field :room_id, value: @room.id %>
     <%= f.submit "投稿", class: "form-submit" %>
