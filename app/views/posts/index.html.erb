@@ -28,7 +28,9 @@
       
       <div class="sidebar">
         <% if @rankings.present? %>
-          <button id="toggle-button" class="ranking-button">人気戦型ランキングはこちらをクリック！</button>
+          <div class="ranking-container"> 
+            <button id="toggle-button" class="ranking-button">人気戦型ランキング</button>
+          </div>
           <div class="ranking-list" id="ranking-list" style="display: none;">
             <% @rankings.each_with_index do |(battle_type, count), index| %>
               <p class="ranking-item"><%= "#{index + 1}位  #{battle_type}: #{count}件" %></p>

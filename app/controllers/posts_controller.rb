@@ -55,7 +55,7 @@ class PostsController < ApplicationController
   end
   
   def confirm
-    @posts = current_user.posts.draft.page(params[:page]).per(6).reverse_order
+    @posts = current_user.posts.draft.page(params[:page]).per(8).reverse_order
   end
 
   def rankings

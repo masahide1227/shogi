@@ -1,7 +1,7 @@
 .cover-user-show {
     height: 100%;
     width: 100%;
-    background-image: url(/assets/mypage.jpg);
+    background-image: url("mypage.jpg");
     background-color: rgba(255, 255, 255, 0.4);
     background-blend-mode: lighten;
     background-size: 100% 100%;
@@ -10,16 +10,61 @@
 .cover-user-index {
     height: 100%;
     width: 100%;
-    background-image: url(/assets/users.jpg);
+    background-image: url("users.jpg");
     background-color: rgba(255, 255, 255, 0.4);
     background-blend-mode: lighten;
     background-size: 100% 100%;
 }
 
+.d-flex {
+    gap: 15px; /* 画像と名前の間隔 */
+}
+
+.user-info {
+    display: flex;
+    align-items: center !important; /* ユーザー名と投稿数を横並びに */
+    gap: 20px; /* ユーザー名と投稿数の間隔 */
+    flex-wrap: nowrap; /* 強制的に横並び */
+    min-height: 50px;
+}
+
+.caption {
+    margin: 0 !important; /* 余計な余白を削除 */
+    white-space: nowrap !important; /* 改行を防ぐ */
+}
+
+.caption.h4 {
+    margin-top: 0 !important; /* 余計な余白を削除して高さを揃える */
+    display: flex;
+    align-items: center; /* ユーザー名を縦方向に中央配置 */
+    height: 50px; /* 画像の高さと一致させる */
+    line-height: normal; /* テキストの高さを揃える */
+}
+
+.one-post {
+    background-color: white; /* 背景色を白に */
+    width: 100% !important; /* 背景の幅を親要素いっぱいに */
+    max-width: 95%; /* 背景がコンテンツを囲むように調整 */
+    min-height: 70px; /* 背景の高さを確保 */
+    margin: 0 auto; /* 中央揃え */
+    padding: 10px; /* 内側の余白を調整 */
+    display: flex;
+    flex-direction: column; /* 背景が子要素のサイズに影響を受けるように */
+}
+
+.profile-img {
+    width: 50px !important; /* 画像の幅を固定 */
+    height: 50px !important; /* 画像の高さを固定 */
+    object-fit: cover !important; /* 画像の比率を崩さずトリミング */
+    border-radius: 50%; /* 丸く表示する（任意） */
+    position: relative;
+    top: -10px; /* 画像のみ少し上に移動 */
+} 
+
 .cover-user-edit {
     height: 100%;
     width: 100%;
-    background-image: url(/assets/mypage_edit.jpg);
+    background-image: url("mypage_edit.jpg");
     background-color: rgba(255, 255, 255, 0.4);
     background-blend-mode: lighten;
     background-size: 100% 100%;
@@ -47,6 +92,7 @@
     align-items: center;
     width: 100vw;
     padding-right: 105px;
+    margin-top: -30px !important; /* ボタンを上に移動 */
 }
   
 .chat-button-size {
@@ -81,6 +127,8 @@
     }
 
     .container {
+        width: 100% !important; /* スマホでは幅を100%に */
+        max-width: 100% !important; /* 背景の幅に合わせる */
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -106,8 +154,8 @@
         align-items: center;
         padding-right: 0; /* 余白をリセット */
         margin-top: -50px; /* 必要なら調整 */
-        height: 80px;
-        margin-bottom: 10px;
+        height: 10px;
+        margin-bottom: 50px;
     }
 
     .chat-button-size {

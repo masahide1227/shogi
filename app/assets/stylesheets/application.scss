@@ -91,6 +91,7 @@ a:hover {
   background-color: #ff6347;
   color: #fff;
   margin-right: 16px;
+  margin-left: auto;
   font-size: 1.2rem;
 }
 
@@ -136,11 +137,19 @@ a:hover {
   margin-bottom: 0;
 }
 
-.btn-info, .btn-danger {
+.btn-info{
   border-radius: 8px;
   margin-bottom: 10px;
   display: block; 
   width: 100%;
+}
+
+.btn-danger {
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block; 
+  width: 10%;
+  margin-left: auto; /* 右寄せ */
 }
 
 .btn-dark {
@@ -202,7 +211,7 @@ a:hover {
   align-items: center;
   height: 150%;
   width: 100%;
-  background-image: url(/assets/room.jpg);
+  background-image: url("room.jpg");
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
   background-size: 100% 100%;
@@ -278,19 +287,6 @@ a:hover {
 }
 
 /* スマホ・タブレット用のメニュー（ハンバーガーメニュー） */
-.menu {
-  position: absolute;
-  top: 40px;
-  right: 10px;
-  background: black;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
-  width: 200px;
-}
-
 .menu.hidden {
   display: none;
 }
@@ -315,7 +311,7 @@ a:hover {
 
   .menu {
     position: absolute;
-    top: 50px;
+    top: 30px;
     right: 10px;
     background: black;
     padding: 10px;
@@ -372,6 +368,14 @@ a:hover {
     margin-top: 5px !important;
   }
 
+  .btn-primary {
+    background-color: #ff6347;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: auto;
+    font-size: 1.2rem;
+  }
+
   .talk-room-container {
     width: 100%;
     max-width: 100vw;
@@ -386,12 +390,12 @@ a:hover {
 
   .talk-room-content {
     width: 90%;
-    max-width: 600px;
+    max-width: 400px;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    display: flex;
+    overflow-x: hidden !important;
+    display: flex !important;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -431,27 +435,44 @@ a:hover {
   }
 
   .form-text-field {
-    width: 80%;
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    width: 90% !important;
+    max-width: 100vw !important;
+    margin-bottom: -25px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
   }
 
   .form-submit {
-    width: 90% !important; /* スマホでは幅90% */
-    max-width: 100px; /* 最大幅を少し狭く */
-    padding: 12px 18px !important; /* 少し小さく */
-    font-size: 16px !important; /* フォントサイズも少し小さく */
-    margin-left: 10px;
-    margin-top: 0 !important;
+    width: 100% !important; /* ✅ 画面いっぱいに */
+    max-width: 120px !important; /* ✅ 送信ボタンの最大幅を適切に設定 */
+    margin-left: auto !important; /* ✅ 自動配置で中央寄せ */
+    margin-right: auto !important; /* ✅ 送信ボタンを中央配置 */
+    display: block !important; /* ✅ 横幅いっぱいを確保 */
+  }
+
+  .comments p {
+    text-align: center !important; /* ✅ テキストを中央揃え */
+    width: 120% !important; /* ✅ 画面幅いっぱい */
+    max-width: 100vw !important;
+    margin-top: -100px !important;
+    margin-left: -310px !important;
   }
 
   .message-form {
-    flex-direction: column; /* スマホでは縦並びに */
-    align-items: stretch;
-    gap: 5px; /* 少し間隔を狭くする */
+    display: flex !important;
+    flex-direction: column !important; /* ✅ 縦並びに */
+    align-items: center !important; /* ✅ 入力欄とボタンを中央配置 */
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin-top: 10px !important;
+  }
+
+  .comment-count {
+    text-align: center !important; /* ✅ コメント件数を中央揃え */
+    font-size: 14px !important;
+    color: #666 !important;
+    margin-bottom: 5px !important;
   }
 
   .btn-dark {

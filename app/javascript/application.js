@@ -44,10 +44,12 @@ function setupRankingToggle() {
   if (toggleButton && rankingList) {
     toggleButton.addEventListener("click", function () {
       console.log("Toggle button clicked"); // クリックが発生したか確認
-      rankingList.style.display = rankingList.style.display === "none" ? "block" : "none";
-    });
-  } else {
-    console.log("Toggle button or ranking list not found!"); // 要素が見つからない場合のログ
+      if (rankingList.style.display === "none" || rankingList.style.display === "") {
+        rankingList.style.display = "block";
+      } else {
+        rankingList.style.display = "none";
+      }
+      });
   }
 }
 
@@ -68,3 +70,23 @@ document.addEventListener("turbolinks:load", function () {
   adjustPostWidth();
   setupRankingToggle();
 });
+
+
+function adjustTalkRoomScroll() {
+  const talkRoom = document.querySelector(".talk-room-content");
+  const messages = document.querySelectorAll(".message-container"); // ✅ メッセージを取得
+
+  if (talkRoom && messages.length > 0 && window.innerWidth <= 768) {
+    setTimeout(() => {
+      messages[Math.floor(messages.length / 2)].scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 300); // ✅ 300ms 遅延で確実に適用
+  }
+}
+
+// 初回ロード時
+document.addEventListener("DOMContentLoaded", adjustTalkRoomScroll);
+
+// Turbo Drive のページ遷移時
+document.addEventListener("turbo:load", adjustTalkRoomScroll);
+
+
