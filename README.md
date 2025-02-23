@@ -60,20 +60,24 @@
 <br><br>
 <br><br>
 5　【リアクション】棋譜投稿詳細画面では投稿された棋譜に対し「いいね」を押したり、コメントをすることができる。
+
 ![image](https://github.com/user-attachments/assets/3a063e8c-dec2-4f58-a781-cb5b27eefe18)
 <br><br>
 <br><br>
 6　【フォロー・フォロワー】ユーザー一覧からユーザーをクリックして、そのユーザーをフォローすることが可能
+
 ![image](https://github.com/user-attachments/assets/ce29f3fc-f029-4f07-b2a6-640884383372)
 
 ![image](https://github.com/user-attachments/assets/8cbcdb82-30a6-4a88-897c-0e16d6f4db0a)
 <br><br>
 <br><br>
 7　【チャット機能】相互フォローとなったユーザー同士はアプリ内でチャットが可能
+
 ![image](https://github.com/user-attachments/assets/393ac019-f4b8-4316-b02a-367b25586554)
 <br><br>
 <br><br>
 8　【プロフィール編集】マイページではプロフィール編集や自分が投稿した棋譜を編集できる。
+
 ![image](https://github.com/user-attachments/assets/513c8622-984e-47f4-8263-6967489484c3)
 
 ![image](https://github.com/user-attachments/assets/53b6d56b-3ab2-4d8e-ac08-7a88791e8a8f)
