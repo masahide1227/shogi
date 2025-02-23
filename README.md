@@ -81,3 +81,32 @@
 ![image](https://github.com/user-attachments/assets/513c8622-984e-47f4-8263-6967489484c3)
 
 ![image](https://github.com/user-attachments/assets/53b6d56b-3ab2-4d8e-ac08-7a88791e8a8f)
+
+# 機能一覧
+・　ユーザー認証機能<br>
+・　投稿機能<br>
+・　画像アップロード機能<br>
+・　閲覧機能<br>
+・　編集機能<br>
+・　下書き機能<br>
+・　削除機能<br>
+・　検索機能<br>
+・　コメント機能<br>
+・　いいね機能<br>
+・　フォロー・フォロワー機能<br>
+・　チャット機能<br>
+・　バリデーション・ページネーション<br>
+・　ハンバーガーメニュー（スマホのみ）<br>
+・　レスポンシブ対応<br>
+
+# 開発環境
+・OS<br>
+　Windows<br>
+・使用言語<br>
+　HTML、CSS、JavaScript、Ruby<br>
+・フレームワーク<br>
+　Ruby on Rails<br>
+・JSライブラリ<br>
+　jQuery<br>
+・データベース<br>
+　PostgreSQL<br>
