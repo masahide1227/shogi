@@ -21,7 +21,8 @@ Rails.application.routes.draw do
   end
 
   resources :users, only:[:index, :show, :edit, :update] do
-    resources :messages, only: [:create]    
+    resources :messages, only: [:create]
+    resources :rooms, only: [:index, :create, :show]    
     member do
       get :follows, :followers
     end

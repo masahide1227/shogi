@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     words_count = Hash.new(0)
     Post.where(status: 'published').pluck(:battle_type).each do |battle_type|
       battle_type.split("VS").each do |word|
-        word.strip! # 前後の空白を削除
+        word.strip!
         words_count[word] += 1 unless word.empty?
       end
     end
