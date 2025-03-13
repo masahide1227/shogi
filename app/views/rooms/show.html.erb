@@ -20,6 +20,8 @@
           </div>
         </div>
       <% end %>
+    <% else %>
+      <p class="text-muted">まだメッセージがありません</p>
     <% end %>
   </div>
   <%= form_for [@room, @message], html: { class: "message-form" } do |f| %>
