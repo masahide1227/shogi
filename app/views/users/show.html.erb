@@ -34,9 +34,12 @@
     <% unless @user.id == current_user.id %>
       <% if (current_user.following? @user) && (@user.following? current_user)  %>
         <% if @isRoom == true %>
-          <div class="chat-button-container">
-            <p class="user-show-room">
-            <a href="<%= room_path(@roomId) %>" class="btn btn-primary btn-lg chat-button-size">チャットへ</a></p>
+          <div class="container d-flex flex-column align-items-center position-relative">
+            <div class="chat-button-container">
+              <p class="user-show-room">
+                <a href="<%= room_path(@roomId) %>" class="btn btn-primary btn-lg chat-button-size">チャットへ</a>
+              </p>
+            </div>
           </div>
         <% else %>
           <%= form_for @room, url: user_rooms_path(current_user), method: :post do |f| %>

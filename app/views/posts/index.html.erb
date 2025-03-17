@@ -27,11 +27,7 @@
       </div>
       
       <div class="sidebar">
-        <!-- デバッグ用の表示 -->
-        <p>ランキングのデータ件数: <%= @rankings.size %></p>
-        <pre><%= @rankings.inspect %></pre>
-
-        <% if @rankings.present? %>
+        <% if @rankings && !@rankings.empty? %>
           <div class="ranking-container"> 
             <button id="toggle-button" class="ranking-button">人気戦型ランキング</button>
           </div>

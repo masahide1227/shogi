@@ -53,12 +53,12 @@
 }
 
 .profile-img {
-    width: 50px !important; /* 画像の幅を固定 */
-    height: 50px !important; /* 画像の高さを固定 */
+    width: 70px !important; /* 画像の幅を固定 */
+    height: 70px !important; /* 画像の高さを固定 */
     object-fit: cover !important; /* 画像の比率を崩さずトリミング */
     border-radius: 50%; /* 丸く表示する（任意） */
     position: relative;
-    top: -10px; /* 画像のみ少し上に移動 */
+    top: 0px; /* 画像のみ少し上に移動 */
 } 
 
 .cover-user-edit {
@@ -87,12 +87,11 @@
 }
 
 .chat-button-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100vw;
-    padding-right: 105px;
-    margin-top: -30px !important; /* ボタンを上に移動 */
+    position: absolute;
+    right: 0px; /* 画面の右端に寄せる */
+    top: -20px; /* 必要に応じて調整 */
+    padding-right: 0; /* 既存の105pxの影響を防ぐ */
+    margin-top: -30px !important; /* 必要なら調整 */
 }
   
 .chat-button-size {
@@ -102,8 +101,8 @@
     display: inline-block;
     padding: 15px;
     font-size: 15px !important;
-    margin-right: 0;
-  }
+    margin-right: 10px;
+}
 
   /* スマホ対応 */
 @media (max-width: 768px) {
@@ -163,8 +162,6 @@
         height: 50px;
         font-size: 16px !important;
         padding: 5px;
-        position: absolute; /* 絶対位置を設定 */
-        right: 0; /* 右寄せ */
     }
 }
 

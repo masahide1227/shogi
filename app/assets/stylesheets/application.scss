@@ -95,7 +95,7 @@ a:hover {
 .btn-primary {
   background-color: #ff6347;
   color: #fff;
-  margin-right: 16px;
+  margin-right: 0px;
   margin-left: auto;
   font-size: 1.2rem;
 }
@@ -151,10 +151,11 @@ a:hover {
 
 .btn-danger {
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   display: block; 
   width: 10%;
-  margin-left: auto; /* 右寄せ */
+  margin-top: 50%;
+  margin-left: 0%; /* 右寄せ */
 }
 
 .btn-dark {
@@ -323,7 +324,7 @@ a:hover {
     border-radius: 5px;
     display: none;
     z-index: 1000;
-    width: 200px;
+    width: 250px;
   }
 
   .menu-button {
@@ -376,7 +377,7 @@ a:hover {
   .btn-primary {
     background-color: #ff6347;
     color: #fff;
-    margin-top: 5px;
+    margin-top: 70px;
     margin-left: auto;
     font-size: 1.2rem;
   }
