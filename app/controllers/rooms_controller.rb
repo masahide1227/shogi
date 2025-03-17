@@ -2,7 +2,17 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    user = User.find(params[:entry][:user_id]) # チャット相手のユーザー
+    unless params[:entry].present? && params[:entry][:user_id].present?
+      redirect_to root_path, alert: "チャットの作成に失敗しました。もう一度お試しください。"
+      return
+    end
+
+    user = User.find_by(id: params[:entry][:user_id]) # チャット相手のユーザー
+    
+    unless user
+      redirect_to root_path, alert: "対象のユーザーが見つかりませんでした。"
+      return
+    end
 
     unless current_user.following?(user) && user.following?(current_user)
       redirect_to user_path(user), alert: "相互フォローのユーザーとしかチャットできません"
@@ -12,7 +22,7 @@ class RoomsController < ApplicationController
     existing_room = Room.joins(:entries)
                         .where(entries: { user_id: [current_user.id, user.id] })
                         .group("rooms.id")
-                        .having("COUNT(rooms.id) = 2")
+                        .having("COUNT(DISTINCT entries.user_id) = 2")
                         .first
 
     if existing_room
@@ -20,11 +30,15 @@ class RoomsController < ApplicationController
       return
     end
 
-    @room = Room.create
-    Entry.create(user_id: current_user.id, room_id: @room.id)
-    Entry.create(user_id: user.id, room_id: @room.id)
+    @room = Room.new
+    if @room.save
+      Entry.create(user_id: current_user.id, room_id: @room.id)
+      Entry.create(user_id: user.id, room_id: @room.id)
 
-    redirect_to room_path(@room), notice: "チャットルームを作成しました"
+      redirect_to room_path(@room), notice: "チャットルームを作成しました"
+    else
+      redirect_to root_path, alert: "チャットルームの作成に失敗しました。"
+    end
   end
 
   def show
