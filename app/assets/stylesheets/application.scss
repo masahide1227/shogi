@@ -117,6 +117,20 @@ a:hover {
   border-color: black; 
 }
 
+.btn-chat {
+  display: inline-block !important;
+  background-color: #ff6347;
+  color: #fff;
+  margin-top: 25px;
+  margin-right: 0;
+  font-size: 1.2rem;
+}
+
+.btn-chat:hover {
+  background-color: #e55342;
+  border-color: black;
+}
+
 .comments .btn-success {
   margin-bottom: 10px;
   margin-left: 10px;
@@ -154,7 +168,7 @@ a:hover {
   margin-bottom: 30px;
   display: block; 
   width: 10%;
-  margin-top: 50%;
+  margin-top: 20%;
   margin-left: 0%; /* 右寄せ */
 }
 
@@ -211,6 +225,36 @@ a:hover {
   align-self: flex-start;
 }
 
+.btn-followout {
+  background-color: #dc3545; /* 赤（Bootstrapのdanger色） */
+  color: white;
+  margin-top: 20px;
+  margin-right: 0;
+  font-size: 1rem;
+}
+
+.btn-followout:hover {
+  background-color: #c82333; /* 濃い赤 */
+}
+
+.btn-followin {
+  background-color: #28a745;
+  color: white;
+  margin-top: 20px;
+  margin-right: 0;
+  font-size: 1rem;
+}
+
+.btn-followin:hover {
+  background-color: #218838;
+  border-color: black;
+}
+
+.follow-button-container {
+  text-align: right; /* ボタンを右寄せ */
+  width: 100%;
+}
+
 .talk-room-container {
   display: flex;
   flex-direction: column;
@@ -265,9 +309,22 @@ a:hover {
   transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* ホバー時のエフェクト */
 .form-submit:hover {
   background-color: #767070;
+}
+
+.custom-error-box {
+  position: relative;
+  top: 50px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.error-message {
+  margin-top: 0;
 }
 
 /* PC用のメニュー（通常表示） */
@@ -371,14 +428,23 @@ a:hover {
   }
   
   .btn-success {
-    margin-top: 5px !important;
+    margin-top: -5 !important;
   }
 
   .btn-primary {
     background-color: #ff6347;
     color: #fff;
-    margin-top: 70px;
+    margin-top: 20px;
     margin-left: auto;
+    font-size: 1.2rem;
+  }
+
+  .btn-chat {
+    display: inline-block !important;
+    background-color: #ff6347;
+    color: #fff;
+    margin-top: 120px;
+    margin-right: 0;
     font-size: 1.2rem;
   }
 
