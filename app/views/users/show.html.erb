@@ -40,12 +40,13 @@
             </div>
           </div>
         <% else %>
-          <%= form_for @room, url: user_rooms_path(current_user), method: :post do |f| %>
-            <%= f.fields_for :entries, @entry do |e| %>
-              <%= e.hidden_field :user_id, value: @user.id %>
-            <% end %>
-            <%= f.submit "チャットを始める", class:"btn btn-chat btn-lg user-show-chat"%>
-          <% end %>
+          <div class="container d-flex flex-column align-items-center position-relative">
+            <div class="chat-button-container">
+              <p class="user-show-room">
+                <a href="<%= room_path(@roomId) %>" class="btn btn-chat btn-lg chat-button-size">チャットへ</a>
+              </p>
+            </div>
+          </div>
         <% end %>
       <% end %>
     <% end %>
