@@ -505,15 +505,15 @@ h1 {
     }
 
     .ranking-button {
-      position: absolute !important; /* 親要素の右上に配置 */
-      top: -1085px !important;
-      right: 145px !important;
+      position: static !important;
+      margin-top: 10px;
+      width: 100%;
     }
-
+  
     .ranking-list {
-      position: absolute !important; /* 親要素の右上に配置 */
-      top: -1030px !important;
-      right: 165px !important;
+      position: static !important;
+      margin-top: 10px;
+      width: 100%;
     }
   }
 
