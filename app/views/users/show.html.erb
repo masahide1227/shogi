@@ -40,13 +40,10 @@
             </div>
           </div>
         <% else %>
-          <div class="container d-flex flex-column align-items-center position-relative">
-            <div class="chat-button-container">
-              <p class="user-show-room">
-                <a href="<%= room_path(@roomId) %>" class="btn btn-chat btn-lg chat-button-size">チャットへ</a>
-              </p>
-            </div>
-          </div>
+          <%= form_with url: user_rooms_path(current_user), method: :post do %>
+            <%= hidden_field_tag "entry[user_id]", @user.id %>
+            <%= submit_tag "チャットを始める", class: "btn btn-chat btn-lg user-show-chat" %>
+          <% end %>
         <% end %>
       <% end %>
     <% end %>
