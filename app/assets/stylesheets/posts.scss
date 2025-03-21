@@ -497,11 +497,13 @@ h1 {
     
     .sidebar {
       position: relative !important; /* ✅ `.ranking-container` の基準を作る */
+      margin-top: -1090px;
     }
 
     .ranking-container {
       display: block !important;
       position: relative !important;
+      margin-left: 5px;
     }
 
     .ranking-button {
@@ -513,7 +515,7 @@ h1 {
     .ranking-list {
       position: static !important;
       margin-top: 10px;
-      width: 100%;
+      width: 60%;
     }
   }
 
