@@ -38,20 +38,32 @@ function adjustPostWidth() {
 // **人気戦型ランキングを開閉する関数**
 function setupRankingToggle() {
   console.log("Setting up ranking toggle"); // デバッグ用ログ
-  const toggleButton = document.getElementById("toggle-button");
-  const rankingList = document.getElementById("ranking-list");
-
-  if (toggleButton && rankingList) {
-    toggleButton.addEventListener("click", function () {
-      console.log("Toggle button clicked"); // クリックが発生したか確認
-      if (rankingList.style.display === "none" || rankingList.style.display === "") {
-        rankingList.style.display = "block";
-      } else {
-        rankingList.style.display = "none";
-      }
+    // PC用
+    const toggleButtonPC = document.getElementById("toggle-button");
+    const rankingListPC = document.getElementById("ranking-list");
+  
+    if (toggleButtonPC && rankingListPC) {
+      toggleButtonPC.addEventListener("click", function () {
+        console.log("PC toggle clicked");
+        rankingListPC.style.display = rankingListPC.style.display === "none" || rankingListPC.style.display === ""
+          ? "block"
+          : "none";
       });
+    }
+  
+    // スマホ用
+    const toggleButtonSP = document.getElementById("toggle-button-sp");
+    const rankingListSP = document.getElementById("ranking-list-sp");
+  
+    if (toggleButtonSP && rankingListSP) {
+      toggleButtonSP.addEventListener("click", function () {
+        console.log("SP toggle clicked");
+        rankingListSP.style.display = rankingListSP.style.display === "none" || rankingListSP.style.display === ""
+          ? "block"
+          : "none";
+      });
+    }
   }
-}
 
 // **初回ページ読み込み時**
 document.addEventListener("DOMContentLoaded", function () {

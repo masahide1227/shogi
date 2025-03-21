@@ -427,6 +427,7 @@ h1 {
 
     .row {
       display: block !important; /* スマホでは縦1列にする */
+      margin-top: 10px;
     }
   
     .col {
@@ -497,25 +498,35 @@ h1 {
     
     .sidebar {
       position: relative !important; /* ✅ `.ranking-container` の基準を作る */
-      margin-top: -1090px;
     }
 
     .ranking-container {
       display: block !important;
-      position: relative !important;
-      margin-left: 5px;
+      position: static !important; /* ← relative や absolute ではなく static に */
+      margin: 0px auto !important; /* 余白だけあればOK */
+      margin-bottom: 10px;
+      margin-right: 110px;
+      width: 100%;
+      text-align: center;
     }
-
+  
     .ranking-button {
       position: static !important;
-      margin-top: 10px;
-      width: 100%;
+      margin: 0px auto;
+      margin-bottom: 10px;
+      margin-right: -170px;
+      width: 90%;
+      max-width: 300px;
+      display: block;
     }
   
     .ranking-list {
       position: static !important;
-      margin-top: 10px;
-      width: 60%;
+      text-align: left !important;
+      margin: 5px auto;
+      margin-right: 0px;
+      width: 55%;
+      max-width: 300px;
     }
   }
 

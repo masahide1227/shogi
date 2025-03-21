@@ -19,14 +19,25 @@
         <%= f.submit '検索する', name: nil %>
       <% end %>
     </div>
-
+    
+    <!-- スマホ用ランキング（表示切り替え付き） -->
+    <% if @rankings && !@rankings.empty? %>
+      <div class="ranking-container d-sm-none">
+        <button id="toggle-button-sp" class="ranking-button">人気戦型ランキング</button>
+        <div class="ranking-list" id="ranking-list-sp" style="display: none;">
+          <% @rankings.each_with_index do |(battle_type, count), index| %>
+            <p class="ranking-item"><%= "#{index + 1}位  #{battle_type}: #{count}件" %></p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
     
     <div class="main-content">
       <div class="posts row">
         <%= render 'index', posts: @posts %>
       </div>
       
-      <div class="sidebar">
+      <div class="sidebar d-none d-sm-block">
         <% if @rankings && !@rankings.empty? %>
           <div class="ranking-container"> 
             <button id="toggle-button" class="ranking-button">人気戦型ランキング</button>
